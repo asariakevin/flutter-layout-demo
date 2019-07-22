@@ -100,7 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static Color color = Colors.blue;
 
-  Widget buttonSection = Container(
+  Widget buttonSection = Container
+    (
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -111,6 +112,13 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
   );
 
+  Widget textSection = Container(
+    padding: const EdgeInsets.all(32),
+    child: Text(
+      'Lake Oeschinenn lies at the foot of ',
+      softWrap: true,
+    ),
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,7 +134,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             titleSection,
-            buttonSection
+            buttonSection,
+            textSection
           ],
         ),
       ),
